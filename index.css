@@ -1,0 +1,74 @@
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+}
+#main-wrapper {
+    height: 100%;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
+.search-container {
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.result-card {
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    animation: fadeIn 0.5s ease-in-out;
+}
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+.highlight {
+    background-color: #fef08a;
+    border-radius: 3px;
+    padding: 1px 3px;
+    font-weight: 600;
+}
+.gradient-bg {
+    background-image: linear-gradient(to right, #4f46e5, #7c3aed);
+}
+.gradient-text {
+    background: linear-gradient(to right, #4f46e5, #a855f7);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.loader {
+    border: 2px solid #f3f3f3;
+    border-top: 2px solid #4f46e5;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    animation: spin 1s linear infinite;
+}
+.gemini-loader {
+    border: 2px solid #e2e8f0;
+    border-top: 2px solid #a855f7;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 1s linear infinite;
+}
+.ai-output-container {
+    background-color: #f0f9ff;
+    border-left: 4px solid #3b82f6;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    animation: fadeIn 0.5s;
+}
+.suggestion-item:hover {
+    background-color: #f3f4f6;
+}
+.view-container {
+    animation: fadeIn 0.4s ease-in-out;
+}
+.chat-bubble { max-width: 85%; padding: 12px 16px; border-radius: 20px; margin-bottom: 8px; line-height: 1.5; }
+.chat-bubble-user { background-color: #3b82f6; color: white; align-self: flex-end; }
+.chat-bubble-ai { background-color: #e5e7eb; align-self: flex-start; }
+
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+@keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
